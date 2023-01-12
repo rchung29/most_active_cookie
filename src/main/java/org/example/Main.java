@@ -12,14 +12,17 @@ public class Main {
             throw new RuntimeException("No file given");
         }
         try {
-            date = args[1];
+            date = args[2];
         } catch (Exception e){
             throw new RuntimeException("No date was given");
         }
         if (!filePath.endsWith(".csv")){
             throw new RuntimeException("Invalid file type provided");
         }
-        if (args[1].length()!=10){
+        if (!args[1].equals("-d")){
+            throw new RuntimeException("Arguments are not formatted properly. Should be example.csv -d YYYY-MM-DD ");
+        }
+        if (args[2].length()!=10){
             throw new RuntimeException("Data is in wrong format. Please format it YYYY-MM-DD");
         }
         ArrayList<Cookie> CSV = reader.readCSV(filePath);
