@@ -4,27 +4,15 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         CSVManager reader = new CSVManager();
-        String filePath;
-        String date;
-        try {
-            filePath = args[0];
-        } catch (Exception var) {
-            throw new RuntimeException("No file given");
+        InputValidator validator = new InputValidator();
+        ArrayList<String> formattedArguments = new ArrayList<>();
+        //Reformating argument array for testing purposes.
+        for (int i=0;i<args.length;i++){
+            formattedArguments.add(args[i]);
         }
-        try {
-            date = args[2];
-        } catch (Exception e){
-            throw new RuntimeException("No date was given");
-        }
-        if (!filePath.endsWith(".csv")){
-            throw new RuntimeException("Invalid file type provided");
-        }
-        if (!args[1].equals("-d")){
-            throw new RuntimeException("Arguments are not formatted properly. Should be example.csv -d YYYY-MM-DD ");
-        }
-        if (args[2].length()!=10){
-            throw new RuntimeException("Data is in wrong format. Please format it YYYY-MM-DD");
-        }
+        String filePath = validator.validateFilePath(formattedArguments);
+        System.out.println(filePath);
+        String date = validator.validateDate(formattedArguments);
         ArrayList<Cookie> CSV = reader.readCSV(filePath);
         ArrayList<Cookie> filteredCSV = reader.filterByDate(CSV, date);
         ArrayList<String> output = reader.filterMostActive(filteredCSV);

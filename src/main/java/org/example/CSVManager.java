@@ -21,7 +21,7 @@ public class CSVManager {
                 }
             }
         } catch (IOException e) {
-            throw new RuntimeException("Check that you are submitting the right file.");
+            throw new RuntimeException("Check that you are submitting the right file. File locations is possibly wrong.");
         }
 
         if (CSV.isEmpty()) {
