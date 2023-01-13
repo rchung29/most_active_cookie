@@ -11,7 +11,6 @@ public class Main {
             formattedArguments.add(args[i]);
         }
         String filePath = validator.validateFilePath(formattedArguments);
-        System.out.println(filePath);
         String date = validator.validateDate(formattedArguments);
         ArrayList<Cookie> CSV = reader.readCSV(filePath);
         ArrayList<Cookie> filteredCSV = reader.filterByDate(CSV, date);

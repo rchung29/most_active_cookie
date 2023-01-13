@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f983b5cd-4fef-492a-9a79-2cb14aba15f5" name="Changes" comment="added .jar file">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/InputValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/CSVManagerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/correctFormat.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/empty.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f983b5cd-4fef-492a-9a79-2cb14aba15f5" name="Changes" comment="added testing suite">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CSVManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CSVManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/most_active_cookie.jar" beforeDir="false" afterPath="$PROJECT_DIR$/most_active_cookie.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CSVManagerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CSVManagerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +53,7 @@
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17 (2)",
-    "last_opened_file_path": "/Users/ryan/IdeaProjects/most_active_cookie/src/test/java/org/example",
+    "last_opened_file_path": "/Users/ryan/IdeaProjects/most_active_cookie",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -80,8 +71,8 @@
       <recent name="$PROJECT_DIR$/src/main/java/org/example" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CSVManagerTests.testReadCSV_FileIsEmpty">
-    <configuration name="CSVManagerTests.testReadCSV_CorrectFormat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CSVManagerTests">
+    <configuration name="CSVManagerTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -94,7 +85,76 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.CSVManagerTests.testReadCSV_CorrectFormat&quot;" />
+            <option value="&quot;org.example.CSVManagerTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CSVManagerTests.testFilterByDate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.CSVManagerTests.testFilterByDate&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CSVManagerTests.testFilterMostActive_MultipleOfSameActivity" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.CSVManagerTests.testFilterMostActive_MultipleOfSameActivity&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CSVManagerTests.testFilterMostActive_OneMostActive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.CSVManagerTests.testFilterMostActive_OneMostActive&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -127,82 +187,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CSVManagerTests.testReadCSV_FileLocationIsWrong" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.example.CSVManagerTests.testReadCSV_FileLocationIsWrong&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="InputValidatorTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.example.InputValidatorTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="InputValidatorTests.testValidateDate_DateLengthOrWrongFormat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.example.InputValidatorTests.testValidateDate_DateLengthOrWrongFormat&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CSVManagerTests" />
+        <item itemvalue="Gradle.CSVManagerTests.testFilterMostActive_OneMostActive" />
+        <item itemvalue="Gradle.CSVManagerTests.testFilterMostActive_MultipleOfSameActivity" />
+        <item itemvalue="Gradle.CSVManagerTests.testFilterByDate" />
         <item itemvalue="Gradle.CSVManagerTests.testReadCSV_FileIsEmpty" />
-        <item itemvalue="Gradle.CSVManagerTests.testReadCSV_FileLocationIsWrong" />
-        <item itemvalue="Gradle.CSVManagerTests.testReadCSV_CorrectFormat" />
-        <item itemvalue="Gradle.InputValidatorTests" />
-        <item itemvalue="Gradle.InputValidatorTests.testValidateDate_DateLengthOrWrongFormat" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +210,8 @@
       <workItem from="1673552207047" duration="194000" />
       <workItem from="1673552507849" duration="1119000" />
       <workItem from="1673553646055" duration="581000" />
-      <workItem from="1673554239969" duration="5178000" />
+      <workItem from="1673554239969" duration="6093000" />
+      <workItem from="1673635841845" duration="1891000" />
     </task>
     <task id="LOCAL-00001" summary="implemented functionality such as filtering by date, filtering most active, and csv manager.">
       <created>1673506522741</created>
@@ -242,7 +234,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673507091335</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added testing suite">
+      <created>1673559504174</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673559504174</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added testing suite">
+      <created>1673559601259</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673559601259</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +269,7 @@
     <MESSAGE value="implemented functionality such as filtering by date, filtering most active, and csv manager." />
     <MESSAGE value="fixed argument handling" />
     <MESSAGE value="added .jar file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added .jar file" />
+    <MESSAGE value="added testing suite" />
+    <option name="LAST_COMMIT_MESSAGE" value="added testing suite" />
   </component>
 </project>

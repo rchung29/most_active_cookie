@@ -50,4 +50,71 @@ public class CSVManagerTests {
         String filePath = "src/test/java/org/example/empty.csv";
         assertThrows(RuntimeException.class,() -> testManager.readCSV(filePath));
     }
+    @Test
+    public void testFilterByDate(){
+        CSVManager testManager = new CSVManager();
+        ArrayList<Cookie> testList = new ArrayList<>();
+        ArrayList<Cookie> correctOutput= new ArrayList<>();
+        Cookie testCookie1 = new Cookie("AtY0laUfhglK3lC7","2018-12-09");
+        Cookie testCookie2 = new Cookie("SAZuXPGUrfbcn5UA","2018-12-09");
+        Cookie testCookie3 = new Cookie("5UAVanZf6UtGyKVS","2018-12-09");
+        Cookie testCookie4 = new Cookie("AtY0laUfhglK3lC7","2018-12-07");
+        Cookie testCookie5 = new Cookie("SAZuXPGUrfbcn5UA","2018-12-08");
+        Cookie testCookie6 = new Cookie("5UAVanZf6UtGyKVS","2018-12-05");
+        testList.add(testCookie1);
+        testList.add(testCookie2);
+        testList.add(testCookie3);
+        testList.add(testCookie4);
+        testList.add(testCookie5);
+        testList.add(testCookie6);
+        correctOutput.add(testCookie1);
+        correctOutput.add(testCookie2);
+        correctOutput.add(testCookie3);
+        ArrayList<Cookie> testOutput = testManager.filterByDate(testList,"2018-12-09");
+        assertTrue(correctOutput.equals(testOutput));
+    }
+    @Test
+    public void testFilterMostActive_MultipleOfSameActivity(){
+        CSVManager testManager = new CSVManager();
+        ArrayList<Cookie> testList = new ArrayList<>();
+        ArrayList<String> correctOutput= new ArrayList<>();
+        Cookie testCookie1 = new Cookie("AtY0laUfhglK3lC7","2018-12-09");
+        Cookie testCookie2 = new Cookie("SAZuXPGUrfbcn5UA","2018-12-09");
+        Cookie testCookie3 = new Cookie("5UAVanZf6UtGyKVS","2018-12-09");
+        Cookie testCookie4 = new Cookie("AtY0laUfhglK3lC7","2018-12-07");
+        Cookie testCookie5 = new Cookie("SAZuXPGUrfbcn5UA","2018-12-08");
+        Cookie testCookie6 = new Cookie("5UAVanZf6UtGyKVS","2018-12-05");
+        testList.add(testCookie1);
+        testList.add(testCookie2);
+        testList.add(testCookie3);
+        testList.add(testCookie4);
+        testList.add(testCookie5);
+        testList.add(testCookie6);
+        correctOutput.add("AtY0laUfhglK3lC7");
+        correctOutput.add("SAZuXPGUrfbcn5UA");
+        correctOutput.add("5UAVanZf6UtGyKVS");
+        ArrayList<String> testOutput = testManager.filterMostActive(testList);
+        assertTrue(correctOutput.equals(testOutput));
+    }
+    @Test
+    public void testFilterMostActive_OneMostActive(){
+        CSVManager testManager = new CSVManager();
+        ArrayList<Cookie> testList = new ArrayList<>();
+        ArrayList<String> correctOutput= new ArrayList<>();
+        Cookie testCookie1 = new Cookie("AtY0laUfhglK3lC7","2018-12-09");
+        Cookie testCookie2 = new Cookie("AtY0laUfhglK3lC7","2018-12-09");
+        Cookie testCookie3 = new Cookie("5UAVanZf6UtGyKVS","2018-12-09");
+        Cookie testCookie4 = new Cookie("AtY0laUfhglK3lC7","2018-12-07");
+        Cookie testCookie5 = new Cookie("SAZuXPGUrfbcn5UA","2018-12-08");
+        Cookie testCookie6 = new Cookie("5UAVanZf6UtGyKVS","2018-12-05");
+        testList.add(testCookie1);
+        testList.add(testCookie2);
+        testList.add(testCookie3);
+        testList.add(testCookie4);
+        testList.add(testCookie5);
+        testList.add(testCookie6);
+        correctOutput.add("AtY0laUfhglK3lC7");
+        ArrayList<String> testOutput = testManager.filterMostActive(testList);
+        assertTrue(correctOutput.equals(testOutput));
+    }
 }
